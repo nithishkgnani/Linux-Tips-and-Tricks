@@ -13,4 +13,4 @@ There is a simple way to fix this though: Instead of the Raspbian integrated one
 * `nm-apple` # to show the tray icon without reboot
 
 Now check the network options in system tray.
-[Source](https://raspberrypi.stackexchange.com/a/119653)
+<br />[Source](https://raspberrypi.stackexchange.com/a/119653)
