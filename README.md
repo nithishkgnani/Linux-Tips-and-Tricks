@@ -12,7 +12,8 @@ There is a simple way to fix this though: Instead of the Raspbian integrated one
 * `sudo systemctl disable --now dhcpcd`
 * `sudo systemctl enable --now network-manager`
 
-* `nm-apple` # to show the tray icon without reboot
+* `nm-apple` # to show the tray icon without reboot. As long as this is running in the terminal, you can see and select the network. If you close the terminal, then the tray icon disappears. Any connection that was configured & established will remian working but cannot be modified unless you run the command again.
+* The regular tray icon for conenctions will simply show a prompt "dhcpcd not running".
 
 Now check the network options in system tray.
 <br />[Source](https://raspberrypi.stackexchange.com/a/119653)
