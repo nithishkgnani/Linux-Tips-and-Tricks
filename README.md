@@ -14,5 +14,5 @@ A collection of tips, tricks, solutions, hacks that may or may not be easily fou
 * [Connecting to Enterprise Wi-Fi in Raspberry Pi](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki/raspberry-pi#connecting-to-enterprise-wi-fi-in-raspberry-pi)
 
 ### [SSH, VNC, remote systems](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki/SSH_VNC_Remote-Systems)
-* SSH
-* SCP
+* [SSH](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki/SSH_VNC_Remote-Systems#ssh)
+* [SCP](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki/SSH_VNC_Remote-Systems#scp)
