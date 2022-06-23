@@ -34,13 +34,21 @@ replace <IP_ADDRESS> with the remote host's IP address.
 The Secure Copy Protocol, or SCP, is a file transfer network protocol used to move files between servers and hosts.  
 
 * The basic command to move a file named _filename.txt_ is: `scp file_source_location file_destination_location`. Example:  
-`scp Remote_Host_Username@<IP_ADDRESS>:/home/Remote_Host_Username/Desktop/filename.txt /home/My_Username/Documents/`
-If remote host's username is HOST1 and IP address is 192.168.1.123 and the file is in Desktop. 
-My username is MY_NAME and I want to transfer the file into Documents, the command will be:
+`scp Remote_Host_Username@<IP_ADDRESS>:/home/Remote_Host_Username/Desktop/filename.txt /home/My_Username/Documents/`  
+ 
+
+* If the remote host's username is HOST1 and IP address is 192.168.1.123 and the file is in Desktop. 
+My username is MY_NAME and I want to transfer the file into Documents, the command will be:  
 `scp HOST1@192.168.1.123:/home/HOST1/Desktop/filename.txt /home/MY_NAME/Documents/`
+* The same file transferred from my system to remote system:  
+`scp /home/MY_NAME/Documents/filename.txt HOST1@192.168.1.123:/home/HOST1/Desktop/`
+
+
 * To transfer all files of the same file extension, use asterisk followed by extension. 
 Example to tranfer all python files in remote's Desktop to my Documents:  
 `scp HOST1@192.168.1.123:/home/HOST1/Desktop/*.py /home/MY_NAME/Documents/`
+
+
 * To transfer and entire directory, use the extension `-r` to indicate recursive copy.   
 Say you want to copy the directory named _Folder_A_ in remote's Desktop to my Documents:  
 `scp -r HOST1@192.168.1.123:/home/HOST1/Desktop/Folder_A /home/MY_NAME/Documents/`
