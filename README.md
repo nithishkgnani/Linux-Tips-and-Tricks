@@ -1,6 +1,6 @@
 # Linux-Tips-and-Tricks
 A collection of tips, tricks, solutions, hacks that may or may not be easily found online otherwise.   
-**Check the [Wiki](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki) to explore the repository.**
+### **Check the [Wiki](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki) to explore the repository.**
 
 ## Wiki Contents:
 ### [Linux commands collection](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki/linux-commands-collection#)
