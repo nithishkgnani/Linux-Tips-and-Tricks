@@ -52,3 +52,31 @@ Example to tranfer all python files in remote's Desktop to my Documents:
 * To transfer and entire directory, use the extension `-r` to indicate recursive copy.   
 Say you want to copy the directory named _Folder_A_ in remote's Desktop to my Documents:  
 `scp -r HOST1@192.168.1.123:/home/HOST1/Desktop/Folder_A /home/MY_NAME/Documents/`
+
+## VNC
+
+> Details on how to access a Remote Desktop Server (via VNC) using the Remmina Desktop Client
+
+Assume the two Ubuntu 18.04 systems - **sys1** (Desktop Server) and **sys2** (Desktop Client).
+
+### How to set up the Desktop Server (sys1)?
+
+* Go to Settings > Sharing.
+* Turn on the 'Sharing' toggle on top-right (switched off by default)
+* Toggle on Screen Sharing (switched off by default) > enable 'Allow connections to control the screen'.
+* Set the access options as per your use-case.
+
+### How to set up the Desktop Client (sys2)?
+
+* After you have completed configuring the Desktop server follwing the above steps, open Remmina on your Desktop Client system (sys2).
+* On the top-left, click on the 'plus' icon to create a new connection profile
+* The mandatory fields that need to be filled.
+  * Name - Give your desktop server a name
+  * Protocol - Choose VNC (Virtual Network Computing)
+  * Server - sys1's IP Address
+  * Username - sys1's username
+  * Password - sys1's password set while configuring sys1.
+* Choose 'Color Depth' and 'Quality' as per your use-case.
+* Click on 'Save and Connect'.
+
+This should allow you to control sys1 using sys2 (via VNC) using Remmina Desktop Client Software
