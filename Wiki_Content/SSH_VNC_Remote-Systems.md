@@ -79,4 +79,4 @@ Assume the two Ubuntu 18.04 systems - **sys1** (Desktop Server) and **sys2** (De
 * Choose 'Color Depth' and 'Quality' as per your use-case.
 * Click on 'Save and Connect'.
 
-This should allow you to control sys1 using sys2 (via VNC) using Remmina Desktop Client Software
+This should allow you to control sys1 using sys2 (via VNC) using Remmina Desktop Client Software.
