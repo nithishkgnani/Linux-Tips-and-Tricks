@@ -3,8 +3,8 @@ A collection of tips, tricks, solutions, hacks that may or may not be easily fou
 ### **Check the [Wiki](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki) to explore the repository.**
 
 ## Wiki Contents:
-### [Linux commands collection](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki/linux-commands-collection#)
-* [Terminal commands for general information](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki/linux-commands-collection#terminal-commands-for-general-information)
+### [Linux commands collection](Linux-commands-collection.md)
+* [Terminal commands for general information](Linux-commands-collection#terminal-commands-for-general-information)
 * [Terminal commands for simple tasks](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki/linux-commands-collection#terminal-commands-for-simple-tasks)
 * [Solutions](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki/linux-commands-collection#solutions)
 * [Tips and Tricks](https://github.com/nithishkgnani/Linux-Tips-and-Tricks/wiki/linux-commands-collection#Tips-and-Tricks)
