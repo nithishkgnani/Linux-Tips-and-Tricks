@@ -1,3 +1,5 @@
+[Back to Readme](README.md)
+
 ### Merge issues
 * If the problem is "main and master are entirely different commit histories.", the following will work
 
@@ -16,4 +18,6 @@
       git remote add origin <url>
       git push -u origin master
 [source](https://stackoverflow.com/a/3311824)
+
+[Back to Readme](README.md)
 

@@ -1,5 +1,9 @@
+[Back to Readme](README.md)
 
-
+* [Terminal commands for general information](#terminal-commands-for-general-information)
+* [Terminal commands for simple tasks](#terminal-commands-for-simple-tasks)
+* [Solutions](#solutions)
+* [Tips and Tricks](#tips-and-tricks)
 
 ## Terminal commands for general information 
 
@@ -85,3 +89,4 @@ In case, your grub.conf contains multiple lines for Windows, following functions
 
 [Source](https://unix.stackexchange.com/questions/43196/how-can-i-tell-grub-i-want-to-reboot-into-windows-before-i-reboot/112284#112284)
 
+[Back to Readme](README.md)

@@ -1,3 +1,10 @@
+[Back to Readme](README.md)
+
+* [SSH](#ssh)
+* [SCP](#scp)
+* [VNC](#vnc)
+
+
 ## SSH
 
 #### WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
@@ -53,3 +60,8 @@ Example to tranfer all python files in remote's Desktop to my Documents:
 Say you want to copy the directory named _Folder_A_ in remote's Desktop to my Documents:  
 `scp -r HOST1@192.168.1.123:/home/HOST1/Desktop/Folder_A /home/MY_NAME/Documents/`
 '
+
+## VNC
+
+
+[Back to Readme](README.md)

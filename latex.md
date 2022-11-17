@@ -1,3 +1,5 @@
+[Back to Readme](README.md)
+
 ### Fontawesome
 * Fontawesome is a font that has many symbols like phone, location, envelope, LinkedIn, Bluetooth etc.
 * Example to use the map marker (location pin): the command \faMapMarker from the package fontawesome :  
@@ -25,3 +27,5 @@ Map Symbol: \faMapMarker
 \end{tikzpicture}
 ```
 [Source](https://tex.stackexchange.com/a/377083)
+
+[Back to Readme](README.md)

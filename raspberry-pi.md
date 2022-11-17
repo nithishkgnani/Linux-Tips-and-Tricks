@@ -1,3 +1,8 @@
+[Back to Readme](README.md)
+
+* [Terminal commands for simple tasks](#terminal-commands-for-simple-tasks)
+* [Connecting to Enterprise Wi-Fi in Raspberry Pi](#connecting-to-enterprise-wi-fi-in-raspberry-pi)
+
 ## Terminal commands for simple tasks
 
 * To set date  
@@ -19,3 +24,4 @@ There is a simple way to fix this though: Instead of the Raspbian integrated one
 Now check the network options in system tray.
 <br />[Source](https://raspberrypi.stackexchange.com/a/119653)
 
+[Back to Readme](README.md)
