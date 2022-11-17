@@ -7,6 +7,12 @@
 
 ## SSH
 
+#### Run multiple commands in one ssh command
+- For running commands sequentially,
+`ssh user@RemoteSystemIP "Command1 && Command2"`
+- For running commands simultaneously,
+`ssh user@RemoteSystemIP "Command1 & Command2"`
+
 #### WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
 _Note: If you think your systems are under attack, this solution is not for you !_  
 If you changed or reinstalled the OS on your remote system, it can still retain its IP address.
@@ -60,8 +66,15 @@ Example to tranfer all python files in remote's Desktop to my Documents:
 Say you want to copy the directory named _Folder_A_ in remote's Desktop to my Documents:  
 `scp -r HOST1@192.168.1.123:/home/HOST1/Desktop/Folder_A /home/MY_NAME/Documents/`
 '
+* To transfer files at a much higher speed, use `scp -C` to enable compression
+
+## Passwordless SSH
+To prevent ssh from asking for password everytime you ssh to the remote terminal, use:
+1. `ssh-keygen -t rsa -P ""`, this has to be done once for the local system
+2. `sudo ssh-copy-id -i /root/.ssh/id_rsa.pub user@RemoteSystemIP` once for every remote system
 
 ## VNC
+
 
 
 [Back to Readme](README.md)
