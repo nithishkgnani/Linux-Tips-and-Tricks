@@ -7,13 +7,18 @@
 
 ## SSH
 
-#### Run multiple commands in one ssh command
+#### 1. Run multiple commands in one ssh command
 - For running commands sequentially,
 `ssh user@RemoteSystemIP "Command1 && Command2"`
 - For running commands simultaneously,
 `ssh user@RemoteSystemIP "Command1 & Command2"`
 
-#### WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
+#### 2. Passwordless SSH
+To prevent ssh from asking for password everytime you ssh to the remote terminal, use:
+1. `ssh-keygen -t rsa -P ""` - This has to be done once in your local system
+2. `sudo ssh-copy-id -i /root/.ssh/id_rsa.pub user@RemoteSystemIP` - Do this in your local system once each for every remote system you want to SSH into.
+
+#### 3. WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
 _Note: If you think your systems are under attack, this solution is not for you !_  
 If you changed or reinstalled the OS on your remote system, it can still retain its IP address.
 If you try to connect to it using SSH or try a file transfer using SCP, 
@@ -39,7 +44,6 @@ To fix this issue, type in the terminal:
 `ssh-keygen -R <IP_ADDRESS>`  
 replace <IP_ADDRESS> with the remote host's IP address.  
 `-R hostname` Removes all keys belonging to hostname from a known_hosts file. This option is useful to delete hashed hosts.
-
 
 
 ## SCP
@@ -68,10 +72,6 @@ Say you want to copy the directory named _Folder_A_ in remote's Desktop to my Do
 '
 * To transfer files at a much higher speed, use `scp -C` to enable compression
 
-## Passwordless SSH
-To prevent ssh from asking for password everytime you ssh to the remote terminal, use:
-1. `ssh-keygen -t rsa -P ""`, this has to be done once for the local system
-2. `sudo ssh-copy-id -i /root/.ssh/id_rsa.pub user@RemoteSystemIP` once for every remote system
 
 ## VNC
 
@@ -79,14 +79,14 @@ To prevent ssh from asking for password everytime you ssh to the remote terminal
 
 Assume the two Ubuntu 18.04 systems - **sys1** (Desktop Server) and **sys2** (Desktop Client).
 
-### How to set up the Desktop Server (sys1)?
+#### How to set up the Desktop Server (sys1)?
 
 * Go to Settings > Sharing.
 * Turn on the 'Sharing' toggle on top-right (switched off by default)
 * Toggle on Screen Sharing (switched off by default) > enable 'Allow connections to control the screen'.
 * Set the access options as per your use-case.
 
-### How to set up the Desktop Client (sys2)?
+#### How to set up the Desktop Client (sys2)?
 
 * After you have completed configuring the Desktop server follwing the above steps, open Remmina on your Desktop Client system (sys2).
 * On the top-left, click on the 'plus' icon to create a new connection profile
