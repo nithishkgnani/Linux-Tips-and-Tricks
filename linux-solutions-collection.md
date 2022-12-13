@@ -19,6 +19,17 @@
 `chmod +x filename.extention`  
 Then you can run it using ./filename.bin
 
+### Finding and stopping processes
+* Finding process id of a running software.  
+`pidof <software-name>`  
+Example command for finding process id of VS-Code software: `pidof code`  
+_Note:_ One software can return multiple process ids
+* To kill a process or multiple processes using their process ids:  
+`sudo kill -9 process-id-1 process-id-2 process-id-3 process-id-n`
+* To kill all processes of a software:  
+`sudo kill -9 'pidof <software-name>'`  
+or  
+`killall software-name`
 
 
 
