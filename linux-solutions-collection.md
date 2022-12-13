@@ -13,7 +13,7 @@
 `uname -r`
 
 
-## Terminal commands for simple tasks
+## Terminal commands for doing various tasks
 
 * To make files like .bin file into executable.  
 `chmod +x filename.extention`  
@@ -30,6 +30,14 @@ _Note:_ One software can return multiple process ids
 `sudo kill -9 'pidof <software-name>'`  
 or  
 `killall software-name`
+
+### Search tips
+* To find the locations of any file    
+`locate <filename>`
+* To find all the instances of a given string/keyword in all the directories  
+`grep -Hri <string/keyword>`
+* To find all the instances of a given string/keyword in the current directory  
+`grep -Hri <string/keyword> . `
 
 
 
