@@ -12,6 +12,12 @@
 `ssh user@RemoteSystemIP "Command1 && Command2"`
 - For running commands simultaneously,
 `ssh user@RemoteSystemIP "Command1 & Command2"`
+- How to do a multi-line command (simulateneously and/or sequentially)
+`ssh zenlab@$RemoteIP " \
+iperf -s >/dev/null & \
+tshark && \
+ls \
+"`
 
 #### 2. Passwordless SSH
 To prevent ssh from asking for password everytime you ssh to the remote terminal, use:
