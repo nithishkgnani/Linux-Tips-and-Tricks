@@ -9,3 +9,4 @@ A collection of tips, tricks, solutions, hacks that may or may not be easily fou
 * [GitHub and Git](github-git.md)
 * [Latex](latex.md)
 * [GitHub pages and Hugo](hugo-github-pages.md)
+* [Shell/bash scripting]
