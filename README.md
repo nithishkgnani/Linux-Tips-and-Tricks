@@ -10,4 +10,5 @@ A collection of tips, tricks, solutions, hacks that may or may not be easily fou
 * [Latex](latex.md)
 * [GitHub pages and Hugo](hugo-github-pages.md)
 * [Shell/bash scripting](shell_bash_scripting.md)
+* [Hardware connection and drivers](hardware-drivers.md)
 * [Windows solutions](windows-solutions.md)
