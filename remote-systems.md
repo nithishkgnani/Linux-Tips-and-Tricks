@@ -21,8 +21,62 @@ ls \
 
 #### 2. Passwordless SSH
 To prevent ssh from asking for password everytime you ssh to the remote terminal, use:
-1. `ssh-keygen -t rsa -P ""` - This has to be done once in your local system
-2. `sudo ssh-copy-id -i /root/.ssh/id_rsa.pub user@RemoteSystemIP` - Do this in your local system once each for every remote system you want to SSH into.
+1. `sudo bash`
+2. `ssh-keygen` - This has to be done once in your local system.  
+    * Output:
+    ```
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/home/username/.ssh/id_rsa):
+    ```
+    * Press enter to save your keys to the default /home/username/.ssh directory.  
+    * Then you'll be prompted to enter a password:  
+    `Enter passphrase (empty for no passphrase):` 
+    * Leave the passowrd empty so that you don't have to type it everytime you ssh
+Sample Output:
+```
+root@hostname:/home/username# ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:f0m4ju*************************8dkfdnmfk root@hostname
+The key's randomart image is:
++---[RSA 3072]----+
+| gfhppgh         |
+|+ *+*.* +   **   |
+|o+dfhghgj        |
+|odffgffhg        |
+| o************** |
+|-----------------|
+|ppppppppppppppppp|
+|dfdgrgerjptkaetkw|
+|fdsorkneor--4546*|
++----[SHA256]-----+
+
+```
+
+
+3. `ssh-copy-id -i /root/.ssh/id_rsa.pub RemoteUsername@RemoteSystemIP` - Do this in your local system once each for every remote system you want to SSH into. 
+Sample output:
+```
+root@hostname:/home/username# ssh-copy-id -i /root/.ssh/id_rsa.pub RemoteUsername@RemoteSystemIP
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/root/.ssh/id_rsa.pub"
+The authenticity of host '10.114.64.248 (10.114.64.248)' can't be established.
+ECDSA key fingerprint is SHA256:dfdtg*************************9fjmmdfd.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+```
+
+In case you want to delete the passphrase later:
+1. `ssh-keygen -p` - this commnad is to reset password. 
+2. Then you'll be prompted to enter a password:  
+    `Enter passphrase (empty for no passphrase):` 
+3. Leave the passowrd empty so that you don't have to type it everytime you ssh
 
 #### 3. WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
 _Note: If you think your systems are under attack, this solution is not for you !_  
