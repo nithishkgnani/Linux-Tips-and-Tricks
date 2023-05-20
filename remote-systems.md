@@ -21,7 +21,7 @@ ls \
 
 #### 2. Passwordless SSH
 To prevent ssh from asking for password everytime you ssh to the remote terminal, use:
-1. `sh-keygen -t rsa -P ""` - This has to be done once in your local system.  
+1. `ssh-keygen -t rsa -P ""` - This has to be done once in your local system.  
     * Output:
     ```
     Generating public/private rsa key pair.
