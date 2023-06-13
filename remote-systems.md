@@ -106,6 +106,26 @@ To fix this issue, type in the terminal:
 replace <IP_ADDRESS> with the remote host's IP address.  
 `-R hostname` Removes all keys belonging to hostname from a known_hosts file. This option is useful to delete hashed hosts.
 
+#### 4. X11 forwarding request failed on channel 0
+Issue: GUI apps open on the remote server instead of the client through which you are ssh'ing.  
+Solution:  
+Edit sshd config file on the remote server:
+
+```
+$ sudo vim /etc/ssh/sshd_config
+
+Set `X11UseLocalhost no`
+```
+Save the file.
+
+```
+$ sudo service sshd restart
+
+$ exit
+```
+[Source](https://stackoverflow.com/a/49572001)
+
+
 
 ## SCP
 
