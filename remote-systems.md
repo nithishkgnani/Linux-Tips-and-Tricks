@@ -48,7 +48,7 @@ The key's randomart image is:
 |odffgffhg        |
 | o************** |
 |-----------------|
-|ppppppppppppppppp|
+|ppppppppprrrppppp|
 |dfdgrgerjptkaetkw|
 |fdsorkneor--4546*|
 +----[SHA256]-----+
