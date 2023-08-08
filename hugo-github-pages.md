@@ -1,6 +1,12 @@
 [Back to Readme](README.md)
 
 ### Hosting on github.io
+Use Github actions to automatically host the website from a Hugo theme put up as a repository.  
+Follow the instructions here: https://gohugo.io/hosting-and-deployment/hosting-on-github/
+
+If you want to test the site locally, then follow the instructions in this page: https://gohugo.io/getting-started/quick-start/
+
+#### The old way
 Once your website made using Hugo, is ready and you have tested in local host, to host it on GitHub pages:
 1. Create an empty repository named _<USERNAME>.github.io_
 2. `cd <mysite> #(note: here should be 'cd' + the full path to <mysite>)`  # here <mysite> is your website name created using Hugo
