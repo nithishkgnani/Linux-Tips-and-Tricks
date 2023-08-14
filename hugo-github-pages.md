@@ -25,3 +25,13 @@ Once your website made using Hugo, is ready and you have tested in local host, t
 [_Source_](https://levelup.gitconnected.com/build-a-personal-website-with-github-pages-and-hugo-6c68592204c7)
 
 [Back to Readme](README.md)
+
+### In-line html
+If you need to do things like right-aligned text, which is not availabe in native markdown, you can use html tags like this:  
+`<div style="text-align: right"> your-text-here </div>`  
+But hugo doesn't render html tags. So, set the unsafe parameter to true in your project’s config.toml to output HTML entered in a Markdown content file:  
+```
+[markup.goldmark.renderer]
+unsafe= true
+```
+[_Source_](https://discourse.gohugo.io/t/text-alignment-not-working/36333/5)
