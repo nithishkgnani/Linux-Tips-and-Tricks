@@ -73,6 +73,10 @@ You can abort ongoing change(s):
 Then you should be able to successfully install the package through the software center, or through the command line using `snap install PACKAGE_NAME`.  
 [Source](https://askubuntu.com/a/1029123)
 
+#### Linux Mint - terminal shows asterisks while typing password
+Can be solved by disabling password feedback. Enter the above line in the terminal to stop showing asterisks while typing passwords in Linux Mint.   
+` echo 'Defaults !pwfeedback'|sudo tee /etc/sudoers.d/9_no_pwfeedback `  
+
 ## Tips and Tricks
 
 #### Tell GRUB to reboot into Windows only for the next reboot  
