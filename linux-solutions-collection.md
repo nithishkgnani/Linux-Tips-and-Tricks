@@ -4,6 +4,7 @@
 * [Terminal commands for simple tasks](#terminal-commands-for-simple-tasks)
 * [Solutions](#solutions)
 * [Tips and Tricks](#tips-and-tricks)
+* [Useful Links](#useful-links)
 
 ## Terminal commands for general information 
 
@@ -77,6 +78,7 @@ Then you should be able to successfully install the package through the software
 Can be solved by disabling password feedback. Enter the above line in the terminal to stop showing asterisks while typing passwords in Linux Mint.   
 ` echo 'Defaults !pwfeedback'|sudo tee /etc/sudoers.d/9_no_pwfeedback `  
 
+
 ## Tips and Tricks
 
 #### Tell GRUB to reboot into Windows only for the next reboot  
@@ -113,3 +115,6 @@ In case, your grub.conf contains multiple lines for Windows, following functions
 [Source](https://unix.stackexchange.com/questions/43196/how-can-i-tell-grub-i-want-to-reboot-into-windows-before-i-reboot/112284#112284)
 
 [Back to Readme](README.md)
+
+## Useful links
+* [Linux Mint - 45 Tips and Tweaks](https://easylinuxtipsproject.blogspot.com/p/tips-1.html#ID15)
