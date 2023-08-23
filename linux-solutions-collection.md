@@ -20,6 +20,11 @@
 `chmod +x filename.extention`  
 Then you can run it using ./filename.bin
 
+* To find a particular word or string inside the files of a directory
+```bash
+grep -rni "example string" /path/directory_name/
+```
+
 ### Finding and stopping processes
 * Finding process id of a running software.  
 `pidof <software-name>`  
