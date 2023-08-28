@@ -41,10 +41,16 @@ or
 * To find the locations of any file    
 `locate <filename>`
 * To find all the instances of a given string/keyword in all the directories  
-`grep -Hri <string/keyword>`
+`grep -Hrni <string/keyword>`
 * To find all the instances of a given string/keyword in the current directory  
-`grep -Hri <string/keyword> . `
+`grep -Hrni <string/keyword> . `
 
+* Options explained: -Hrni
+  * -H: print the filename for each match
+  * -r: recursively search subdirectories listed
+  * -n: print the line number for each match
+  * -i: ignore case
+* For more info on grep, type `man grep` in the terminal.
 
 
 ## Solutions 
