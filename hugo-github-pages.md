@@ -35,3 +35,27 @@ But hugo doesn't render html tags. So, set the unsafe parameter to true in your 
 unsafe= true
 ```
 [_Source_](https://discourse.gohugo.io/t/text-alignment-not-working/36333/5)
+
+## Hugo Coder Theme
+
+### Changing global settings
+
+`themes/hugo-coder/assets/scss/_base.scss` This is the file that contains the global settings for the theme.
+
+```html
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+```
+
+REM is a relative value, based on the root font size.
+Keeping the `font-size` to 62.5% will make 1rem = 10px. This is useful for setting any size in rem units.
+
+#### Body font size
+
+If you want the font size in body to be 16px, Under the `body` calss set it to 1.6rem. (Default is 1.8rem)
+
+#### Page width
+
+Under the `.container` class, change the max-width from the default `90rem`.
