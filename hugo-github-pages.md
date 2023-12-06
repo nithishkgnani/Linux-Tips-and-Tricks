@@ -36,6 +36,18 @@ unsafe= true
 ```
 [_Source_](https://discourse.gohugo.io/t/text-alignment-not-working/36333/5)
 
+### Notes
+All the pages are defined by the layouts directory in the theme being used. You may modify those files if needed. Alternately, you can override any layout or rule by creating a file with the same name in the layouts directory of your project.  
+For example, if you want to change the layout of the home page, create a file named index.html in the layouts directory of your project. Then make a new page named _index.md_ in the content directory of your project. This page will be rendered as the homepage.
+```html
+{{ define "content" }}
+  <section class="container page">    
+     /*Add the layout code here*/
+     /* I added the code from the page.html file in the theme  
+     so that the homepage can be like any other page.*/
+  {{ end }}
+```
+
 ## Hugo Coder Theme
 
 ### Changing global settings
