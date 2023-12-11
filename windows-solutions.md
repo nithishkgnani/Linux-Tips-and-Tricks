@@ -22,3 +22,14 @@ Use the free software called `DiskGenius`. It can also handle cloning from a lar
 3. Select the target (destination) disk.
 4. Click on Start. It will take a while to complete.
 Done
+
+### Deleting an OEM partition
+The Windows Disk Management tool does not let one delete the OEM partition. So, you can use the command line tool called "Diskpart".  
+Warning - Proceed at your own risk:
+* Open the Run prompt, type `diskpart`, and hit Enter.
+* Type, and enter `list disk` to list the disks.
+* Select the disk you want to manage – say it is Disk Z, where 'Z' is the disk number.
+* Then type `select disk z` and hit Enter.
+* Enter `list partition` and hit Enter to display all the volumes.
+* Type `select partition x` and hit Enter. Here 'x' stands for the partition you want to delete.
+* Finally, type `delete partition override` and hit Enter to delete it.
