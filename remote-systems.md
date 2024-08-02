@@ -182,4 +182,19 @@ Assume the two Ubuntu 18.04 systems - **sys1** (Desktop Server) and **sys2** (De
 
 This should allow you to control sys1 using sys2 (via VNC) using Remmina Desktop Client Software.
 
+#### How to setup VNC on a remote system completely using CLI
+```
+# Tested on Ubuntu 22
+# First, ssh to remote system
+# Check status of Gnome Remote Desktop service and switch on if inactive
+systemctl --user status gnome-remote-desktop.service
+systemctl --user start gnome-remote-desktop.service
+systemctl --user status gnome-remote-desktop.service
+# Enable vnc
+grdctl vnc enable
+# Set access password
+grdctl set-password "****"
+# Now you can access the remote system using Remmina or any other VNC client
+```
+
 [Back to Readme](README.md)
