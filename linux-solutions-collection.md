@@ -89,6 +89,30 @@ Then you should be able to successfully install the package through the software
 Can be solved by disabling password feedback. Enter the above line in the terminal to stop showing asterisks while typing passwords in Linux Mint.   
 ` echo 'Defaults !pwfeedback'|sudo tee /etc/sudoers.d/9_no_pwfeedback `  
 
+#### Error: Failed to take /etc/passwd lock: Invalid argument
+I faced this error while trying to install a package using apt-get in Windows Subsystem for Linux (WSL).
+```bash
+Failed to take /etc/passwd lock: Invalid argument
+dpkg: error processing package systemd (--configure):
+ installed systemd package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ systemd
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+```
+Solution:
+```bash
+sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_silent
+sudo mkdir /var/lib/dpkg/info
+sudo apt-get update
+sudo apt-get -f install
+sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_silent
+sudo rm -rf /var/lib/dpkg/info
+sudo mv /var/lib/dpkg/info_silent /var/lib/dpkg/info
+sudo apt-get update
+sudo apt-get upgrade
+```
+[Source](https://superuser.com/a/1804301)
+
 
 ## Tips and Tricks
 
