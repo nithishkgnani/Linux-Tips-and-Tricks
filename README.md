@@ -12,3 +12,4 @@ A collection of tips, tricks, solutions, hacks that may or may not be easily fou
 * [Shell/bash scripting](shell_bash_scripting.md)
 * [Hardware connection and drivers](hardware-drivers.md)
 * [Windows solutions](windows-solutions.md)
+* [ROS on Docker in Windows](ros-docker-windows.md)
