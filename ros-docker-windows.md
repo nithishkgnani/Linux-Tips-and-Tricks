@@ -1,6 +1,6 @@
-# ROS2 on Docker in Windows with GUI Support
+# ROS on Docker in Windows with GUI Support
 
-Instructions to setup ROS2 on Docker in Windows with GUI support.
+Instructions to setup ROS2 on Docker in Windows with GUI support. In this example, I have taken the ROS humble version as the base image and made a Dockerfile to build the image. The Dockerfile is available [here](/Files/Dockerfile).
 
 ## Setup
 
@@ -61,15 +61,16 @@ docker run -e DISPLAY=<Your_IP>:0 \
 
 To build the image:  
 
-* Clone this repository to your local machine.
-* Open a normal terminal navigate to the repositry folder containing the Dockerfile.
-* Run the following commands:  
+* Download the [Dockerfile](/Files/Dockerfile) to your local machine.
+* Open a normal terminal navigate to the folder containing the Dockerfile.
+* Run the following commands in a Windows terminal (PowerShell):  
 
 ```bash
 docker build --tag ros2humble:gui .
 ```
 
-* Run the image (using the same command as above):
+* In a different terminal, run `ipconfig` to get your local IP address.
+* Back in initial terminal, run the image (using the same command as above):
 
 ```bash
 docker run -e DISPLAY=<Your_IP>:0 -v C:\Users\YourName\ros-gazebo-lab\ros2_ws:/ros2_ws -v /tmp/.X11-unix:/tmp/.X11-unix -it ros2humble:gui
