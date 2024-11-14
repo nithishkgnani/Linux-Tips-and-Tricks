@@ -76,12 +76,24 @@ docker build --tag ros2humble:gui .
 docker run -e DISPLAY=<Your_IP>:0 -v C:\Users\YourName\ros-gazebo-lab\ros2_ws:/ros2_ws -v /tmp/.X11-unix:/tmp/.X11-unix -it ros2humble:gui
 ```
 
+* This creates a new container from the image and starts it.
 * This should provide you with both GUI support and folder access within your Docker container on Windows.
-* To add a new terminal to the container, you can run the following commands in a new terminal window.
+* To add a new terminal to the running container, you can run the following commands in a new terminal window.
 
 ```bash
-# Get the container ID
+# Get the running container ID
 docker ps
 # Run a new terminal in the container
 docker exec -it <container_id> /bin/bash
 ```
+
+### Starting a container again
+
+If you have stopped the container and want to start it again, you can run the following command:
+
+```bash
+docker ps -a # Get the (stopped) container ID
+docker start -i <container_id> 
+```
+
+* Remember to run the XLaunch application if you had killed it.  
