@@ -29,3 +29,7 @@ Map Symbol: \faMapMarker
 [Source](https://tex.stackexchange.com/a/377083)
 
 [Back to Readme](README.md)
+
+### Markdown and LaTeX for good looking documentation in VS Code
+
+If you want to use LaTeX math in markdown files, install the "Markdown Preview Enhanced" extension in VS Code. It supports both Markdown and LaTeX formatting. The output can then be exported as a PDF if needed.
